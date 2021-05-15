@@ -21,16 +21,17 @@ class DetailViewController: UIViewController {
     }
     func updateUI() {
         if let bountyInfo = ViewModel.bountyInfo {
-            img.image = bountyInfo.img
+            img.image = bountyInfo.image
             name.text = bountyInfo.name
             value.text = "\(bountyInfo.bounty)"
         }
     }
 }
+
 class DetailViewModel {
-    var bountyInfo: bountyInfo?
+    var bountyInfo: BountyInfo?
     
-    func update(model: bountyInfo?) {
+    func update(model: BountyInfo?) {
         bountyInfo = model
     }
 }

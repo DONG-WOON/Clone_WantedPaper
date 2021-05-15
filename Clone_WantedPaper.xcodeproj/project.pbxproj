@@ -14,6 +14,7 @@
 		72D7220C264CD04A000DC8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D7220B264CD04A000DC8E6 /* Assets.xcassets */; };
 		72D7220F264CD04A000DC8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D7220D264CD04A000DC8E6 /* LaunchScreen.storyboard */; };
 		72D72217264CDE20000DC8E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D72216264CDE20000DC8E6 /* DetailViewController.swift */; };
+		72D72219264F966B000DC8E6 /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D72218264F966B000DC8E6 /* BountyInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		72D7220E264CD04A000DC8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72D72210264CD04A000DC8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D72216264CDE20000DC8E6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		72D72218264F966B000DC8E6 /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				72D72204264CD049000DC8E6 /* SceneDelegate.swift */,
 				72D72206264CD049000DC8E6 /* WantedListController.swift */,
 				72D72216264CDE20000DC8E6 /* DetailViewController.swift */,
+				72D72218264F966B000DC8E6 /* BountyInfo.swift */,
 				72D72208264CD049000DC8E6 /* Main.storyboard */,
 				72D7220B264CD04A000DC8E6 /* Assets.xcassets */,
 				72D7220D264CD04A000DC8E6 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D72219264F966B000DC8E6 /* BountyInfo.swift in Sources */,
 				72D72207264CD049000DC8E6 /* WantedListController.swift in Sources */,
 				72D72203264CD049000DC8E6 /* AppDelegate.swift in Sources */,
 				72D72205264CD049000DC8E6 /* SceneDelegate.swift in Sources */,

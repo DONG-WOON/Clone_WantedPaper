@@ -67,9 +67,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="img" destination="O2J-GT-Raq" id="oYd-RN-ENF"/>
-                                            <outlet property="name" destination="Nae-gp-f6y" id="DsG-s9-fIU"/>
-                                            <outlet property="value" destination="ehA-pN-ZU3" id="y9E-LY-pY3"/>
+                                            <outlet property="bountyLabel" destination="ehA-pN-ZU3" id="UZD-3K-zm9"/>
+                                            <outlet property="imgView" destination="O2J-GT-Raq" id="6SA-UG-IZv"/>
+                                            <outlet property="nameLabel" destination="Nae-gp-f6y" id="SrP-5x-gKD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

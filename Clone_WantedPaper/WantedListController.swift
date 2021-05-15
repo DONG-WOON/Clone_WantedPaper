@@ -6,48 +6,41 @@
 
 import UIKit
 
-struct bountyInfo {
-    let name: String
-    let bounty: Int
-
-    var img: UIImage? {
-        return UIImage(named: "\(name).jpg")
-    }
-
-    init(name: String, bounty: Int) {
-        self.name = name
-        self.bounty = bounty
-    }
-}
-
 class ListCell: UITableViewCell {
-    @IBOutlet var img: UIImageView!
+    @IBOutlet var imgView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var bountyLabel: UILabel!
     
-    @IBOutlet var name: UILabel!
-    
-    @IBOutlet var value: UILabel!
-    
-    func update(info: bountyInfo) {
-        img.image = info.img
-        name.text = info.name
-        value.text = "\(info.bounty)"
+    func update(info: BountyInfo) {
+        imgView.image = info.image
+        nameLabel.text = info.name
+        bountyLabel.text = "\(info.bounty)"
     }
 }
 
 class BountyViewModel {
-    
-    let bountyInfoList: [bountyInfo] = [
-        bountyInfo(name: "sanji", bounty: 100000),
-        bountyInfo(name: "zoro", bounty: 200000),
-        bountyInfo(name: "luffy", bounty: 300000),
-        bountyInfo(name: "nami", bounty: 50000),
-        bountyInfo(name: "franky", bounty: 120000)
+    let bountyInfoList: [BountyInfo] = [
+        BountyInfo(name: "sanji", bounty: 100000),
+        BountyInfo(name: "zoro", bounty: 200000),
+        BountyInfo(name: "luffy", bounty: 300000),
+        BountyInfo(name: "nami", bounty: 50000),
+        BountyInfo(name: "franky", bounty: 120000)
     ]
+    
+    var sortedList: [BountyInfo] {
+        let sortedList = bountyInfoList.sorted { prev, next in
+            return prev.bounty > next.bounty
+        }
+        return sortedList
+    }
+    
+    
     var numOfBountyInfoList: Int {
         return bountyInfoList.count
     }
-    func BountyInfo(at index: Int) -> bountyInfo {
-        return bountyInfoList[index]
+    
+    func bountyInfo(at index: Int) -> BountyInfo {
+        return sortedList[index]
     }
 }
 
@@ -60,7 +53,7 @@ class WantedListController: UIViewController, UITableViewDelegate, UITableViewDa
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
                 
-                let bountyInfo = ViewModel.BountyInfo(at: index)
+                let bountyInfo = ViewModel.bountyInfo(at: index)
                 vc?.ViewModel.update(model: bountyInfo)
             }
         }
@@ -77,9 +70,9 @@ class WantedListController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as? ListCell else {
             return UITableViewCell()
         }
-        let bountyInfo = ViewModel.BountyInfo(at: indexPath.row)
-        cell.update(info: bountyInfo)
         
+        let bountyInfo = ViewModel.bountyInfo(at: indexPath.row)
+        cell.update(info: bountyInfo)
         return cell
     }
     
