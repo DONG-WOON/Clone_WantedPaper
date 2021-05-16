@@ -62,9 +62,9 @@
 			children = (
 				72D72202264CD049000DC8E6 /* AppDelegate.swift */,
 				72D72204264CD049000DC8E6 /* SceneDelegate.swift */,
+				72D72218264F966B000DC8E6 /* BountyInfo.swift */,
 				72D72206264CD049000DC8E6 /* WantedListController.swift */,
 				72D72216264CDE20000DC8E6 /* DetailViewController.swift */,
-				72D72218264F966B000DC8E6 /* BountyInfo.swift */,
 				72D72208264CD049000DC8E6 /* Main.storyboard */,
 				72D7220B264CD04A000DC8E6 /* Assets.xcassets */,
 				72D7220D264CD04A000DC8E6 /* LaunchScreen.storyboard */,
